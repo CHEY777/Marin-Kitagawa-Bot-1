@@ -319,45 +319,7 @@ ${this.client.config.prefix}Help8 [${this.client.config.prefix}h8]
 🍒 ${this.client.config.prefix}ᴘᴜꜱꜱʏ
 🍒 ${this.client.config.prefix}ᴛʀᴀᴘ
 💦 If You Want More Stuff Type ${this.client.config.prefix}h8
-────────────────
--E C O N O M Y
-${this.client.config.prefix}Help9 [${this.client.config.prefix}h9]
-────────────────
-🏮~🏦BANK🏦
-💠Description: Displays user-bank
-🧧Usage: ${this.client.config.prefix}bank
-
-🏮~💵Daily💵
-💠Description: Claims daily gold
-🧧Usage: ${this.client.config.prefix}daily
-
-🏮~🏦🪙Deposit🪙🏦
-💠Description: Deposit your gold to bank
-🧧Usage: ${this.client.config.prefix}deposit
-
-🏮~💰Gamble💰
-💠Discription: Test your gambling skill
-🧧Usage: ${this.client.config.prefix}gamble
-
-🏮~🪙Give🪙
-💠Description: Give gold to someone
-🧧Usage: ${this.client.config.prefix}give
-
-🏮~🏦Rob🏦
-💠Description: Are you a good robber someone Gold
-🧧Usage: ${this.client.config.prefix}rob [tag/quote]
-
-🏮~🎰Slot🎰
-💠Description: Bet Your gold here 
-🧧Usage: ${this.client.config.prefix}bet <amount>
-
-🏮~👛Wallet👛
-💠Description: Displays User wallet
-🧧${this.client.config.prefix}wallet
-
-🏮~🏧Withdraw🏧
-💠Description: Withdraws gold from the bank
-🧧Usage: ${this.client.config.prefix}withdraw <amount>
+───────────────
 ┌────────────┈
 │  🤍マリン🤍
 └────────────┈` }
