@@ -12,8 +12,6 @@ import CallHandler from "./Handlers/CallHandler";
 import AssetHandler from "./Handlers/AssetHandler";
 import EventHandler from "./Handlers/EventHandler";
 import NewsHandler from "./Handlers/NewsHandler";
-import ModsHandler from "./Handlers/ModsHandler";
-import ModsChecker from "./Checkers/ModsChecker";
 
 if (!process.env.MONGO_URI) throw new Error("MONGO URL IS NOT PROVIDED");
 const client = new WAClient({
@@ -37,8 +35,6 @@ const callHandler = new CallHandler(client);
 const assetHandler = new AssetHandler(client);
 const eventHandler = new EventHandler(client);
 const newsHandler = new NewsHandler(client);
-const modsHandler = new ModsHandler(client);
-const modsChecker = new ModsChecker(client);
 messageHandler.loadCommands();
 assetHandler.loadAssets();
 messageHandler.loadFeatures();
@@ -72,7 +68,7 @@ const start = async () => {
         )}`
       );
       cron.schedule(process.env.CRON, async () => {
-        client.log("Clearing All Chats....");
+        client.log("Clearing All Chats...");
         await client.modifyAllChats("clear");
         client.log("Cleared all Chats!");
       });
@@ -95,8 +91,6 @@ const start = async () => {
 
   client.on("group-participants-update", eventHandler.handle);
 
-  client.on("group-participants-update", modsHandler.handleMods);
-
   await client.connect();
 };
 
@@ -113,10 +107,6 @@ db.once("open", () => {
     start();
   });
   client.once("open", () => {
-    messageHandler.handleState();
     newsHandler.broadcastNews();
-    messageHandler.spawnPokemon();
-    modsChecker.check();
-    messageHandler.summonChara();
   });
 });
