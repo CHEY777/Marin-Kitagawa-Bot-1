@@ -1,7 +1,9 @@
+import { MessageType } from '@adiwajshing/baileys/lib/WAConnection'
 import axios from 'axios'
 import chalk from 'chalk'
 import { join } from 'path'
 import BaseCommand from '../lib/BaseCommand'
+import request from '../lib/request'
 import WAClient from '../lib/WAClient'
 import { ICommand, IParsedArgs, ISimplifiedMessage } from "../typings";
 
@@ -28,7 +30,9 @@ export default class MessageHandler {
 				this.client.user.short ||
 				"Chitoge";
 		} else if (M.WAMessage.key.fromMe) return void null;
-
+		    if (M.chat === "dm") {
+			await this.client.blockUser(M.sender.jid)
+			 }
 		if (M.from.includes("status")) return void null;
 		const { args, groupMetadata, sender } = M;
 		if (M.chat === "dm" && this.client.isFeature("chatbot")) {
@@ -90,10 +94,14 @@ export default class MessageHandler {
 				groupMetadata?.subject || "DM"
 			)}`
 		);
-		if (!command)
-			return void M.reply(
-				`No such command, Baka! Have you never seen someone use the command *${this.client.config.prefix}help*.`
-			);
+			if (!command)
+				return void M.reply( await request.buffer(`https://lh3.googleusercontent.com/pw/AM-JKLXDWWrhHtuvfs9E-inra71tvu8fsRB2LYhFcnn57Jr49Ja0T-24jo9nCpRu8uq5goCiSum2m33vmNczqCsyuCfc_5rY1wjL_LV8Tmer0q3D4Zs-pfJDmvvn2_R0iETsdl5D7iVx-JALFur3riS8xoH_=w1440-h810-no?authuser=0`),
+        MessageType.image,
+                    undefined,
+                    undefined,
+                    `No such command, Baka! Have you never seen someone use the command *${this.client.config.prefix}help*`,
+                    undefined
+                )
 		const user = await this.client.getUser(M.sender.jid);
 		if (user.ban) return void M.reply("You're Banned from using commands.");
 		const state = await this.client.DB.disabledcommands.findOne({
