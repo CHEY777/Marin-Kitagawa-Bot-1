@@ -23,7 +23,7 @@ export default class Command extends BaseCommand {
         let well = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url: well }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
-            caption: `Konnichiwa👋 ɪ ᴀᴍ sɪᴇsᴛᴀ!
+            caption: `Konnichiwa👋 ɪ ᴀᴍ 𝓜𝓪𝓻𝓲𝓷💖🖤!
 
 ᴛʏᴘᴇ " ${this.client.config.prefix}ᴏᴡɴᴇʀ " ᴛᴏ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ ᴏᴡɴᴇʀ!
 
@@ -203,6 +203,10 @@ ${this.client.config.prefix}Ｈelp4 [${this.client.config.prefix}h4]
 〽️~ᴘɪɴᴛᴇʀᴇꜱᴛ
 💠Discription: Search wallpaper from pinterest.com
 🧧Usage: ${this.client.config.prefix}pinterest
+
+〽️~karaoke
+💠Discription: Gives you karaoke song playable on WhatsApp
+🧧Usage:${this.client.config.prefix}karaoke [term]
 ────────────────
 -U T I L S 
 ${this.client.config.prefix}Help5 [${this.client.config.prefix}h5]
@@ -219,7 +223,7 @@ ${this.client.config.prefix}Help5 [${this.client.config.prefix}h5]
 🏮 ${this.client.config.prefix}ᴄɪʀᴄʟᴇ
 🏮 ${this.client.config.prefix}shorturl [Your url]
 🏮 ${this.client.config.prefix}toimg [(tag)[sticker]]
-🏮 ${this.client.config.prefix}karaoke [term]
+🏮 ${this.client.config.prefix}chey
 🏮 ${this.client.config.prefix}doge
 ────────────────
 -M O D E R A T I O N 
@@ -296,7 +300,7 @@ ${this.client.config.prefix}Ｈelp7 [${this.client.config.prefix}h7]
 💠Description: Gives you the definition of the given word
 🧧Usage: ${this.client.config.prefix}Urbandictionary
 
-〽️/ᴡᴇᴀᴛʜᴇʀ
+〽️~ᴡᴇᴀᴛʜᴇʀ
 💠Description:
 🧧Usage: ${this.client.config.prefix}Weather
 ────────────────
