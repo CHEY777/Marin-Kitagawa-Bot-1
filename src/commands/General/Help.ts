@@ -211,6 +211,10 @@ ${this.client.config.prefix}Ｈelp4 [${this.client.config.prefix}h4]
 〽️~karaoke
 💠Discription: Gives you karaoke song playable on WhatsApp
 🧧Usage:${this.client.config.prefix}karaoke [term]
+
+〽️~iguser
+💠Discription: Get the info of a user from ig
+🧧Usage:${this.client.config.prefix}iguser [name]
 ────────────────
 -U T I L S 
 ${this.client.config.prefix}Help5 [${this.client.config.prefix}h5]
