@@ -77,6 +77,10 @@ ${this.client.config.prefix}Ｈelp1 [${this.client.config.prefix}h1]
 〽️~marin
 💠Description: Displays the info
 🧧Usage: ${this.client.config.prefix}marin
+
+〽️~info
+💠Description: Will display the info of the bot
+🧧Usage: ${this.client.config.prefix}info
 ────────────────
 -W E E B S 
 ${this.client.config.prefix}Ｈelp2 [${this.client.config.prefix}h2]
